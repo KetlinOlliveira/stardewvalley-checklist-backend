@@ -39,4 +39,10 @@ public class ItemService {
         // Retorna apenas o DTO
         return ItemResponseDTO.fromEntity(itemSalvo);
     }
+
+    public ItemResponseDTO buscarPorId(Long id) {
+        Item item = repository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Item não encontrado no banco de dados."));
+        return ItemResponseDTO.fromEntity(item);
+    }
 }

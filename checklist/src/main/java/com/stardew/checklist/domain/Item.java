@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "items")
 public class Item {
@@ -22,10 +23,15 @@ public class Item {
     @Column(nullable = false)
     private String conjunto;
 
+    @Column(columnDefinition = "TEXT") 
+    private String descricao;
+
     @Column(nullable = false)
     private String sala;
 
     private String estacao;
+
+    @Column(columnDefinition = "TEXT") 
     private String comoConseguir;
     private boolean coletado = false;
 

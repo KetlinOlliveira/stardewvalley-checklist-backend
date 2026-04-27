@@ -9,6 +9,7 @@ public record ItemResponseDTO(
         String nome,
         String conjunto,
         String sala,
+        String descricao,
         String estacao,
         String comoConseguir,
         boolean coletado
@@ -20,6 +21,7 @@ public record ItemResponseDTO(
                 item.getNome(),
                 item.getConjunto(),
                 item.getSala(),
+                item.getDescricao(),
                 item.getEstacao(),
                 item.getComoConseguir(),
                 item.isColetado()
