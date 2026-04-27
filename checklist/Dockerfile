@@ -2,8 +2,8 @@
 FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 # Copia os arquivos de dentro da pasta checklist
-COPY checklist/pom.xml .
-COPY checklist/src ./src
+COPY checklist/checklist/pom.xml .
+COPY checklist/checklist/src ./src
 
 RUN mvn clean package -DskipTests
 
